@@ -5,18 +5,26 @@ import HomeScreen from './home'
 
 const Stacklayout = () => {
     return (
-        <Stack>
+        <Stack
+            screenOptions={{
+                //headerShown: false
+                headerShadowVisible: false,
+                contentStyle: {
+                    backgroundColor: 'white',
+                }
+            }}
+        >
 
             <Stack.Screen
                 name='home/index'
                 options={{
-                    title: 'Home Screem'
+                    title: 'Home Screem',
                 }}
             />
             <Stack.Screen
                 name='products/index'
                 options={{
-                    title: 'Products Screem'
+                    title: 'Products Screem',
                 }}
             />
             <Stack.Screen
@@ -29,6 +37,12 @@ const Stacklayout = () => {
                 name='sattings/index'
                 options={{
                     title: 'Sattings Screem'
+                }}
+            />
+            <Stack.Screen
+                name='products/[id]'
+                options={{
+                    title: 'Ver Detalles',
                 }}
             />
 
