@@ -8,7 +8,8 @@ const ProductsScreen = () => {
         <View className='flex flex-1 px-4'>
             <FlatList
                 data={products}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => item.id.toString()}
+                ItemSeparatorComponent={() => <View className="h-[1px] bg-gray-200 my-4" />}
                 renderItem={({ item }) => (
                     <View className=' mt-10'>
                         <Text className='text-2xl font-work-black'>{item.title}</Text>
