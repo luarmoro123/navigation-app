@@ -1,11 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Link } from 'expo-router'
+import { Link, Redirect } from 'expo-router'
 
 const index = () => {
     return (
-        <SafeAreaView>
+        <Redirect href="/home" />
+    )
+
+    {/* <SafeAreaView>
             <View className='mt-6 mx-5'>
                 <Text className='text-4xl '
                     style={{ fontFamily: 'WorkSans-Black' }}>Hola mundo</Text>
@@ -19,9 +22,10 @@ const index = () => {
                     Products
                 </Link>
             </View>
-        </SafeAreaView>
+        </SafeAreaView> */}
 
-    )
+
+
 }
 
 export default index
