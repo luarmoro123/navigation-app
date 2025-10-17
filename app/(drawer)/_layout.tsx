@@ -11,6 +11,7 @@ export default function Layout() {
 
             }
             screenOptions={{
+                //headerShown: false,
                 overlayColor: 'rgba(0,0,0,0.4)',
                 drawerActiveBackgroundColor: '#C4E3FF',
                 headerShadowVisible: false,
@@ -19,6 +20,17 @@ export default function Layout() {
                 }
             }}
         >
+            <Drawer.Screen
+                name="(tabs)" // This is the name of the page and must match the url from root
+                options={{
+                    headerShown: false,
+                    drawerLabel: 'Home',
+                    title: 'Inicio',
+                    drawerIcon: ({ color, size }) => (
+                        <Ionicons name="home-outline" size={size} color={color}></Ionicons>
+                    )
+                }}
+            />
             <Drawer.Screen
                 name="user/index" // This is the name of the page and must match the url from root
                 options={{

@@ -5,7 +5,7 @@ import { Link, Redirect } from 'expo-router'
 
 const index = () => {
     return (
-        <Redirect href="/drawer" />
+        <Redirect href="/home" />
     )
 
     {/* <SafeAreaView>
