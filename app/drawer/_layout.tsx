@@ -1,34 +1,42 @@
 import { Drawer } from 'expo-router/drawer';
 import { Ionicons } from '@expo/vector-icons';
+import CustonDrawer from '@/components/shared/CustonDrawer';
 
 export default function Layout() {
     return (
         <Drawer
+            drawerContent={
+
+                CustonDrawer
+
+            }
             screenOptions={{
-                headerStyle: { backgroundColor: '#1976D2' },
-                headerTintColor: '#fff',
-                drawerActiveTintColor: '#1976D2',
+                overlayColor: 'rgba(0,0,0,0.4)',
+                drawerActiveBackgroundColor: '#C4E3FF',
+                headerShadowVisible: false,
+                sceneStyle: {
+                    backgroundColor: 'white'
+                }
             }}
         >
             <Drawer.Screen
-                name="user/index"
+                name="user/index" // This is the name of the page and must match the url from root
                 options={{
-                    drawerLabel: 'Usuarios',
+                    drawerLabel: 'User',
                     title: 'Usuarios',
                     drawerIcon: ({ color, size }) => (
-                        <Ionicons name="person-outline" size={size} color={color} />
-                    ),
+                        <Ionicons name="person-circle-outline" size={size} color={color}></Ionicons>
+                    )
                 }}
             />
-
             <Drawer.Screen
-                name="schedule/index"
+                name="schedule/index" // This is the name of the page and must match the url from root
                 options={{
-                    drawerLabel: 'Horarios',
+                    drawerLabel: 'Horario',
                     title: 'Horarios',
                     drawerIcon: ({ color, size }) => (
-                        <Ionicons name="calendar-outline" size={size} color={color} />
-                    ),
+                        <Ionicons name="calendar-outline" size={size} color={color}></Ionicons>
+                    )
                 }}
             />
         </Drawer>
