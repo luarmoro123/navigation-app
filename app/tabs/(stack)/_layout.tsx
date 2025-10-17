@@ -7,7 +7,7 @@ const Stacklayout = () => {
     return (
         <Stack
             screenOptions={{
-                //headerShown: false
+                //headerShown: false,
                 headerShadowVisible: false,
                 contentStyle: {
                     backgroundColor: 'white',
@@ -18,7 +18,7 @@ const Stacklayout = () => {
             <Stack.Screen
                 name='home/index'
                 options={{
-                    title: 'Home Screem',
+                    title: 'Inicio',
                 }}
             />
             <Stack.Screen

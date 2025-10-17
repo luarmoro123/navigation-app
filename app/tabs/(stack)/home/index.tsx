@@ -8,16 +8,16 @@ const HomeScreen = () => {
     return (
         <SafeAreaView>
             <View className='px-10'>
-                <CustonButton onPress={() => router.push('/profile')} >
+                <CustonButton onPress={() => router.push('/tabs/(stack)/profile')} >
                     Perfil
                 </CustonButton>
-                <CustonButton color='secondary' onPress={() => router.push('/sattings')} className='mb-3 mt-3'>
+                <CustonButton color='secondary' onPress={() => router.push('/tabs/(stack)/sattings')} className='mb-3 mt-3'>
                     sattings
                 </CustonButton>
-                <CustonButton color='tertiary' onPress={() => router.push('/products')} >
+                <CustonButton color='tertiary' onPress={() => router.push('/tabs/(stack)/products')} >
                     Productos
                 </CustonButton>
-                <CustonButton onPress={() => router.push('/products')} variant='text-only' >
+                <CustonButton onPress={() => router.push('/tabs/(stack)/products')} variant='text-only' >
                     Productos
                 </CustonButton>
 
